@@ -1,0 +1,26 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+      {
+          "authLevel": "function",
+          "type": "httpTrigger",
+          "direction": "in",
+          "name": "req",
+          "methods": [
+              "get"
+          ]
+      },
+      {
+        "type": "http",
+        "direction": "out",
+        "name": "$return"
+      },
+      {
+        "type": "blob",
+        "direction": "out",
+        "name": "outputblob",
+        "connection":"AzureWebJobsStorage",
+        "path":"input/seo_final2.csv"
+    }
+  ]
+}
